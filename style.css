@@ -1,0 +1,204 @@
+/* profile picture in a circle, commented out the border coz 
+i think it looks better without the border, but can check later  */
+.images > img {
+   /*  border: 0px #8ACDD7 solid; */
+    border-radius: 50%;
+}
+
+/* the background color is set to the title, will have to add to every section,
+decide later if to keep section-wise or whole body */
+#title {
+    background-color: #F9F9E0;
+    border:50px #8ACDD7 solid;
+    border-bottom: 0;
+}
+
+/* this is the paragraphs part, border for the thin lines */
+.for-thin-border.lead {
+    border-top:1px black solid;
+    border-bottom: 1px black solid
+}
+
+/* button characteristics on hover */
+.the-buttons > .btn:hover {
+    color: var(--bs-btn-hover-color);
+    background-color:#8ACDD7 ;
+    border-color: black;
+    color:black;
+}
+
+/* i believe the title section is done more or less
+moving onto next section */
+/* about and education same styling */
+#about, #education, #other-work {
+    background-color: #F9F9E0;
+    border:50px #8ACDD7 solid;
+    border-bottom: 0;
+    padding-bottom: 30px;
+    padding-left: 30px;
+}
+#certifications {
+    background-color: #F9F9E0;
+    border:50px #8ACDD7 solid;
+    padding-bottom: 30px;
+    padding-left: 30px;
+}
+
+/* sectioning offf the two about portions */
+.about-two-cols {
+    display:grid;
+    grid-template: 1fr/auto;
+    gap:10px;
+    padding-top: 50px;
+}
+.about-heading {
+    grid-column: 1;
+    margin-left: 20px;
+}
+.about-content {
+    grid-column: 2;
+}
+
+/* next section skills and languages */
+
+#skills {
+    background-color: #F9F9E0;
+    border:50px #8ACDD7 solid;
+    border-top: 0;
+    border-bottom:0;
+}
+
+.flex-container {
+    display:flex;
+    justify-content:space-around;
+}
+
+.card.card-cover.one {
+    background-color: #8ACDD7;
+    border:3px solid black;
+}
+.card.card-cover.two {
+    background-color: #8ACDD7;
+    border:3px solid rgb(84, 142, 179);
+}
+
+/* next section portfolio */
+
+.row.featurette {
+    padding-left: 40px;
+}
+
+.row.featurette > .col-md-5 > img {
+    margin-top: 20px;
+    margin-bottom:20px;
+    margin-right: 20px;
+}
+
+#portfolio > h2 {
+    margin-left: 40px;
+    margin-top: 40px;
+}
+
+.row.featurette > .col-md-7 > .featurette-heading.one{
+    padding-left:10%;
+    padding-top:70px;
+}
+.row.featurette > .col-md-7 > .featurette-heading.two {
+    padding-right: 40%;
+    padding-top:70px;
+}
+
+#portfolio {
+    background-color: #F9F9E0;
+    border:50px #8ACDD7 solid;
+    border-bottom:0;
+}
+
+/* start of other work experience, same as education portion */
+
+a:link{
+    color:#8ACDD7;
+}
+a:visited{
+    color:pink;
+}
+a:hover{
+    color:pink;
+}
+a:active{
+    color:black;
+}
+
+/* contacts */
+
+#contacts > .container > .contacts-body {
+    background-color: #8ACDD7;
+    border:2px black solid;
+}
+
+/* reduced title border size for phone and pfp image scaled down
+will need to add border reduction for each section
+unless i add the border to the whole body, will check later */
+@media(max-width: 800px) {
+    .images #profile-image {
+        width: 100%; 
+        height: auto; 
+        margin-left: 10%;
+    }
+    #title {
+        border:20px #8ACDD7 solid;
+        border-bottom: 0;
+    }
+    #about {
+        border:20px #8ACDD7 solid;
+        border-bottom: 0;
+        border-top: none;
+    }
+    .about-two-cols {
+        display:grid;
+        grid-template-columns: 1fr;
+        padding-left: 10px;
+        padding-right: 20px;
+        padding-top: 0px;
+    }
+    .about-heading{
+        padding-top: 0;
+        grid-column: span 1;
+        text-align: center;
+        margin-left: -20px;
+
+    }
+    .about-content {
+        grid-column: span 1;
+    }
+    .for-thin-border {
+        margin-bottom: 0px;
+    }
+    #skills{
+        border-top: 20px #8ACDD7 solid;
+    }
+    .row.featurette > .col-md-5 > img {
+        width:85%;
+    }
+    .row.featurette > .col-md-7 > .featurette-heading.one {
+        padding-left: 0%;
+        margin-left: 0%;
+        padding-top:0%
+    }
+    .row.featurette > .col-md-7 > .featurette-heading.two {
+        padding-top:0%
+    }
+    .about-heading > h2 {
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+    #portfolio > h2 {
+        text-align: center;
+        margin-top: 40px;
+        margin-left:-10px;
+    }
+
+    #portfolio > .row.featurette > .col-md-7 > img {
+        width:80%;
+    }
+}
